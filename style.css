@@ -1,0 +1,1155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Krona+One&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background-color: black;
+  background-image:url(NEWHEADER.jpg) ;
+  background-position: center center;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  height: 100px;
+}
+.hamburger-menu{
+  display: none;
+}
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #ffffff;
+
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+
+  width: 300px;
+  height: 100%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+
+  color: #333;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+.Nav{
+  display: none;
+  font-family: 'Krona One', sans-serif;
+  align-items: center;
+  justify-content: space-between;
+}
+.Burger{
+  display: none;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+}
+.Burger span{
+  height: 2px;
+  width: 80%;
+  transform: scale(1);
+  background-color: #fff;
+}
+.Burger::before, .Burger::after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease 0s;
+}
+.Burger::before { top: 0}
+
+.Burger::after {bottom: 0;}
+
+.Burger.active span { transform: scale(0) }
+
+.Burger.active::before{
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+.Burger.active::after{
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+.language-container {
+  display: flex; 
+  align-items: center; 
+  font-family: 'Inter', sans-serif;
+}
+.language-container a {
+  text-decoration: none; 
+  margin: 0 3px;
+  color: white;
+  font-weight: 300;
+  font-size: 18px; 
+}
+.language-container p {
+  color: white;
+  font-weight: 300; 
+  font-size: 18px;
+}
+.Autolux-container p {
+  font-family: 'Inter', sans-serif;
+}
+.autolux-text {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+}
+.de-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+.MainScreen{
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.Image img{
+  max-width: 100%; 
+  height: auto;
+}
+.ChoseYourCar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+.Findbuttons{
+  display: flex;
+  justify-content:space-between;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: auto;
+}
+.Testdrive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.Findcar{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Findcar h2{
+  font-size: 33px;
+  font-weight: 550;
+  font-family: 'Inter', sans-serif;
+}
+.Testdrive h2{
+  font-size: 33px;
+  font-weight: 550;
+  font-family: 'Inter', sans-serif;
+}
+.Testdrive button{
+  margin-top: 15px;
+  font-size: 33px;
+  font-weight: 550;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.Findcar button{
+  margin-top: 15px;
+  font-size: 33px;
+  font-weight: 550;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.ChoseYourCarPhrases{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ChoseYourCarPhrases h2{
+  font-family: 'Krona One', sans-serif;
+  font-size: 22px;
+  color: dimgray;
+  padding-top: 33px;
+  padding-bottom: 10px;
+}
+.ChoseYourCarPhrases h1{
+  font-family: 'Krona One', sans-serif;
+  font-size: 35px;
+  color: black;
+}
+.Decor img{
+  width: 100%;
+}
+.Sedan{
+  display: flex;
+  flex-direction: column;
+}
+.Sand img{
+  width: 100%;
+}
+.SedanExamples{
+  display: flex;
+  justify-content: space-around;
+  /* border: 2px solid black; */
+}
+.BMWi5M60X-drive{
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+  height: auto;
+  margin: 20px 15px;
+}
+.BMWi5M60X-drive img{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.BMW8SeriescoupeM{
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+  height: auto;
+  margin: 20px 15px;
+}
+.BMW8SeriescoupeM img{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.BMWi4M50{
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+  height: auto;
+  margin: 20px 15px;
+}
+.BMWi4M50 img{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.BMW8SeriescoupeM h3{
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Krona One', sans-serif;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.BMW8SeriescoupeM p{
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+}
+.BMWi5M60X-drive h3{
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Krona One', sans-serif;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.BMWi5M60X-drive p{
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  width: 100%;
+}
+.BMWi4M50 h3{
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Krona One', sans-serif;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.BMWi4M50 p{
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  width: 100%;
+}
+.Cabriolet{
+  display: flex;
+  flex-direction: column;
+}
+.Mountains{
+  margin-top: 30px;
+}
+.Mountains img{
+  width: 100%;
+}
+.CabrioletExamples{
+  display: flex;
+  justify-content: space-around;
+}
+.BMW8cabrio{
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+  height: auto;
+  margin: 20px 15px;
+}
+.BMW8cabrio img{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.BMWZ4roadster{
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+  height: auto;
+  margin: 20px 15px;
+}
+.BMWZ4roadster img{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.BMWM8cabrio{
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+  height: auto;
+  margin: 20px 15px;
+}
+.BMWM8cabrio img{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.BMW8cabrio h3{
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Krona One', sans-serif;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.BMW8cabrio p{
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+}
+.BMWZ4roadster h3{
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Krona One', sans-serif;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.BMWZ4roadster p{
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+}
+.BMWM8cabrio h3{
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Krona One', sans-serif;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.BMWM8cabrio p{
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+}
+.Sky{
+  margin-top: 30px;
+}
+.Sky img{
+  width: 100%;
+}
+.Crossover{
+  display: flex;
+  flex-direction: column;
+}
+.CrossoverExamples{
+  display: flex;
+  justify-content: space-around;
+}
+.BMWX6{
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+  height: auto;
+  margin: 20px 15px;
+}
+.BMWX6 img{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.BMWX5{
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+  height: auto;
+  margin: 20px 15px;
+}
+.BMWX5 img{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.BMWX7M60ixDrive{
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 27%;
+  height: auto;
+  margin: 20px 15px;
+}
+.BMWX7M60ixDrive img{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.BMWX6 h3{
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Krona One', sans-serif;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.BMWX6 p{
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+}
+.BMWX5 h3{
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Krona One', sans-serif;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.BMWX5 p{
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+}
+.BMWX7M60ixDrive h3{
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Krona One', sans-serif;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.BMWX7M60ixDrive p{
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+}
+.TestDriveImage img{
+  width: 100%;
+  margin-top: 30px;
+}
+.Testdriver{
+  display: flex;
+  flex-direction: column;
+}
+.TestDriveBlock{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 17px;
+}
+.TestDriveText{
+  width: 65%;
+  display: flex;
+  justify-content: center;
+}
+.TestDriveText p{
+  font-size:20px;
+  font-family: 'Krona One', sans-serif;
+  width: 80%;
+}
+.TestDriveButton{
+  width: 35%;
+}
+.TestDriveBlock button{
+  font-family: 'Krona One', sans-serif;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 550;
+  background-color: black;
+  padding: 10px 20px;
+  font-size: 33px;
+}
+.AboutUsLogo img{
+  width: 100%;
+  margin-top: 30px;
+}
+.AboutUs{
+  display: flex;
+  flex-direction: column;
+}
+.ContainerAboutUs{
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+.ContainerAboutUsText{
+  width: 40%;
+  height: auto;
+  font-family: 'Krona One', sans-serif;
+  font-size: 20px;
+  margin-right: 60px;
+}
+.ContainerAboutUsIMG{
+  width: 45%;
+}
+.ContainerAboutUsIMG img{
+  width: 100%;
+} 
+.ContainerAboutUsText p{
+  font-size: 18px;
+}
+.foter {
+  background-color:lightgrey;
+  display: flex;
+  padding: 0 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation{
+display: flex;
+flex-direction: column;
+}
+.navigation a{
+  margin-bottom: 5px;
+  font-family: 'Inter', sans-serif; 
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+}
+.OurInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.deluxe h2{
+  font-family: 'Krona One', sans-serif;
+}
+.Location h3{
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+
+.register{
+  display: flex;
+}
+.man{
+  display: flex;
+  margin-left: 5%;
+}
+.forma{
+  display: flex;
+  margin-top: 80px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.imgman{
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.form {
+  max-width: 320px;
+  padding: 15px;
+  margin: 20px auto;
+  background-color: #fff;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  
+  border: 1px solid #ccc;
+  
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  
+  border: 0;
+  background-color: #117dbc;
+  cursor: pointer;
+  
+  font-family: inherit;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0a28a2;
+}
+
+
+
+
+* {box-sizing: border-box;}
+
+.wrap {
+  width: 100%;
+  justify-content: space-around;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+} 
+.price{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.box {
+  width: 200px;
+  float: left;
+  margin-right: 20px;
+  border:2px solid black;
+}
+.top {
+  background: #36454A;
+  padding: 20px;
+  text-align: center;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+p {
+  margin: 0px 0px 10px;
+  font-size: 30px;
+}
+.title {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+.price {
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+sup {
+  font-size: 24px;
+  position: relative;
+  top: -15px;
+  color: #6eaca7;
+}
+span {
+    font-size: 16px;
+    color: #6eaca7;
+    text-transform: uppercase;
+}
+.button {
+  text-decoration: none;
+  color: #6eaca7;
+  font-size: 18px;
+  border: 1px solid #6eaca7;
+  display: inline-block;
+  padding: 6px 12px;
+  line-height: 1.5;
+  text-align: center;
+  border-radius: 4px;
+  transition: 0.4s linear;
+  margin-bottom: 30px;
+}
+.button:hover {
+  color: white;
+  border-color: white;
+}
+.bottom {
+  padding: 20px 20px 40px;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+li {
+  border-bottom: 1px solid #e3e3e3;
+  color: #6eaca7;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 749px){
+  .man{
+    display: flex;
+    margin-right: 5%;
+  }
+  header {
+    background-color: black;
+    background-image:url(NEWHEADER.jpg) ;
+    background-position: center center;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    height: 100px;
+  }
+  .wrap {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+  } 
+  .box {
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20%;
+  }
+  .autolux-text {
+    display: none;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+  }
+  .de-text {
+    display: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+  }
+  .hamburger-menu{
+    display: inline;
+    right: -100%;
+  }
+  .Burger{
+    display: flex;
+  }
+  header {
+  background-image:url(Headermine.jpg);
+  padding: 0 20px;
+  height: 50px;
+  }
+  .Nav{
+    display: none;
+    font-family: 'Krona One', sans-serif;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0; bottom: 0; right: 0; left: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: black;
+    /* animation: burgerAnimation 0,4s; */
+  }
+  .Nav ul{
+    flex-direction: column;
+    row-gap: 30px;
+  } 
+  .language-container a { 
+    display: none;
+    font-size: 13px; 
+  }
+  .language-container p {
+    display: none;
+    font-size: 13px;
+  }
+  .autolux-text {
+    font-size: 17px;
+  }
+  .de-text {
+    font-size: 14px;
+  }
+  .Findcar h2{
+    font-size: 30px;
+  }
+  .Testdrive h2{
+    font-size: 30px;
+  }
+  .Testdrive button{
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+  .Findcar button{
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+  .ChoseYourCarPhrases h2{
+    font-size: 18px;
+  }
+  .ChoseYourCarPhrases h1{
+    font-size: 28px;
+  }
+  .SedanExamples{
+    flex-direction: column;
+    align-items: center;
+  }
+  .BMWi5M60X-drive{
+    text-align: center;
+    width: 90%;
+  }
+  .BMW8SeriescoupeM{
+    text-align: center;
+    width: 90%;
+  }
+  .BMWi4M50{
+    text-align: center;
+    width: 90%;
+  }
+  .CabrioletExamples{
+    flex-direction: column;
+    align-items: center;
+  }
+  .BMW8cabrio{
+    text-align: center;
+    width: 90%;
+  }
+  .BMWZ4roadster{
+    text-align: center;
+    width: 90%;
+  }
+  .BMWM8cabrio{
+    text-align: center;
+    width: 90%;
+  }
+  .CrossoverExamples{
+    flex-direction: column;
+    align-items: center;
+  }
+  .BMWX6{
+    text-align: center;
+    width: 90%;
+  }
+  .BMWX5{
+    text-align: center;
+    width: 90%;
+  }
+  .BMWX7M60ixDrive{
+    text-align: center;
+    width: 90%;
+  }
+  .ContainerAboutUs{
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  .ContainerAboutUsText{
+    margin: 20px;
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+  }
+  .ContainerAboutUsText p{
+    font-size: 18px;
+  }
+  .ContainerAboutUsIMG{
+    width: 80%;
+  }
+  .ContainerAboutUsIMG img{
+    width: 100%;
+  } 
+  .TestDriveBlock{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 17px;
+  }
+  .TestDriveText{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+  }
+  .TestDriveText p{
+    font-size:18px;
+    font-family: 'Krona One', sans-serif;
+    width: 80%;
+  }
+  .TestDriveButton{
+    width: 35%;
+  }
+  .TestDriveBlock button{
+    font-size: 22px;
+  }
+
+  .register{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .forma{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .imgman{
+    width: 100%;
+  }
+
+
+  .foter {
+    flex-direction: column;
+    padding: 0 60px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navigation{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  }
+  .deluxe{
+    margin-bottom: 30px;
+  }
+  .navigation a{
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif; 
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+  }
+  .Location{
+    margin-bottom: 30 px;
+  }
+  .numders{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .OurInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .deluxe h2{
+    font-family: 'Krona One', sans-serif;
+  }
+  .Location h3{
+    font-family: 'Inter', sans-serif;
+  }
+  .SocialMedia {
+    margin-bottom: 30px;
+  }
+  .numders h3{
+    margin-top: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 479px){
+  .MainScreen{
+    flex-direction: column;
+    align-items: center;
+    }
+  .Findcar h2{
+    font-size: 25px;
+    font-weight: 550;
+    font-family: 'Inter', sans-serif;
+  }
+  .Testdrive h2{
+    font-size: 25px;
+    font-weight: 550;
+    font-family: 'Inter', sans-serif;
+  }
+  .ChoseYourCarPhrases h2{
+    font-family: 'Krona One', sans-serif;
+    font-size: 16px;
+    color: dimgray;
+    padding-top: 33px;
+    padding-bottom: 10px;
+  }
+  .ChoseYourCarPhrases h1{
+    font-family: 'Krona One', sans-serif;
+    font-size: 20px;
+    color: black;
+  }
+  .TestDriveText{
+    width: 55%;
+  }
+  .TestDriveText p {
+    font-size: 15px;
+  }
+  .TestDriveButton{
+    width: 45%;
+  }
+  .TestDriveBlock button{
+    font-size: 18px;
+  }
+}
